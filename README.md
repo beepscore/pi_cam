@@ -11,4 +11,7 @@ https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 # Results
 
 ## install python module
-sudo apt-get install python3-picamera
+    sudo apt-get install python3-picamera
+
+python3-picamera was already installed.
+May have been installed by raspi-config when I enabled camera.
