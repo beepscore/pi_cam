@@ -15,3 +15,7 @@ https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 
 python3-picamera was already installed.
 May have been installed by raspi-config when I enabled camera.
+
+## to run program
+
+    python3 pi_cam.py
