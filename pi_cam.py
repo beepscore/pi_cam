@@ -33,6 +33,15 @@ class PiCam:
         self.camera.hflip = True
         self.camera.vflip = True
 
+    def __del__(self):
+        """ class destructor.
+	Close camera to avoid error picamera.exc.PiCameraMMALError
+        Camera component couldn't be enabled: Out of resources (other than memory)
+        http://stackoverflow.com/questions/27468543/
+	picamera-cannot-be-initialized-as-a-class-member-when-the-script-is-run-from-com
+        """
+        self.camera.close()
+
     def take_picture(self, camera, image_name):
         """ Use arguments for dependency injection.
         This way unit tests can call with a mock camera.
