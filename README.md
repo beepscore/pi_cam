@@ -16,6 +16,7 @@ https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 python3-picamera was already installed.
 May have been installed by raspi-config when I enabled camera.
 
-## to run program
+## Run unit tests
+To run tests in terminal, cd to top level directory that contains subdirectory test
 
-    python3 pi_cam.py
+    pi-cam git:(master) ✗ python3 -m unittest discover test
