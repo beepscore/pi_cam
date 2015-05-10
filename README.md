@@ -19,7 +19,6 @@ May have been installed by raspi-config when I enabled camera.
 ## Run unit tests
 To run tests in terminal, cd to top level directory that contains subdirectory test
 
-    pi-cam git:(master) ✗ python3 -m unittest discover test
     pi@pika ~/beepscore/pi-cam $ python3 -m unittest discover test
     ...
     ----------------------------------------------------------------------
