@@ -6,6 +6,7 @@ import picamera
 class PiCam:
     """
     Uses Raspberry Pi camera.
+    http://picamera.readthedocs.org/en/release-1.9/api.html
     """
 
     def __init__(self):
@@ -39,6 +40,7 @@ class PiCam:
         Camera component couldn't be enabled: Out of resources (other than memory)
         http://stackoverflow.com/questions/27468543/
         picamera-cannot-be-initialized-as-a-class-member-when-the-script-is-run-from-com
+        https://github.com/waveform80/picamera/issues/35
         """
         self.camera.close()
 
