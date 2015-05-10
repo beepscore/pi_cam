@@ -35,10 +35,10 @@ class PiCam:
 
     def __del__(self):
         """ class destructor.
-	Close camera to avoid error picamera.exc.PiCameraMMALError
+        Close camera to avoid error picamera.exc.PiCameraMMALError
         Camera component couldn't be enabled: Out of resources (other than memory)
         http://stackoverflow.com/questions/27468543/
-	picamera-cannot-be-initialized-as-a-class-member-when-the-script-is-run-from-com
+        picamera-cannot-be-initialized-as-a-class-member-when-the-script-is-run-from-com
         """
         self.camera.close()
 
