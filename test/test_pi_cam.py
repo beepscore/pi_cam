@@ -26,7 +26,7 @@ class TestPiCam(unittest.TestCase):
         self.assertTrue(self.pi_cam.camera.vflip)
 
     def test_take_picture(self):
-        self.pi_cam.take_picture(self.pi_cam.camera, "test_image.jpg")
+        self.pi_cam.take_picture(self.pi_cam.camera, "images/test_image.jpg")
 
 if __name__ == "__main__":
     unittest.main()
