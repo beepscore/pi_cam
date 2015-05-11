@@ -8,24 +8,33 @@ import file_utils
 class TestFileUtils(unittest.TestCase):
 
     def setUp(self):
-        pass
+        # seconds decimal point . followed by 6 digits at end of string
+        # self.regex = re.compile(r"\.\d{6}$")
+        self.regex = re.compile(r"\d{8}T\d{6}\.\d{6}$")
        
     def test_timestamp_string(self):
         actual = file_utils.FileUtils.timestamp_string()
         # TODO: Update test by year 2020
         self.assertEqual("201", actual[0:3])
-        self.assertTrue("T" in actual)
 
-    def test_timestamp_string_ending(self):
+    def test_timestamp_string_end(self):
         actual = file_utils.FileUtils.timestamp_string()
-        # seconds decimal point . followed by 6 digits at end of string
-        regex = re.compile(r"\.\d{6}$")
         # use findall to get list
         # alternatively could use search not match when not matching beginning of string
         # https://docs.python.org/3.3/howto/regex.html 
-        matches = regex.findall(actual)
+        matches = self.regex.findall(actual)
         self.assertEqual(1, len(matches))
 
+    def test_filename_with_timestamp_start(self):
+        basename = "bar"
+        actual = file_utils.FileUtils.filename_with_timestamp(basename)
+        self.assertEqual(basename, actual[0:len(basename)])
+        
+    def test_filename_with_timestamp_end(self):
+        basename = "grizzly"
+        actual = file_utils.FileUtils.filename_with_timestamp(basename)
+        matches = self.regex.findall(actual)
+        self.assertEqual(1, len(matches))
 
 if __name__ == "__main__":
     unittest.main()
