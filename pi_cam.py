@@ -2,6 +2,7 @@
 
 import picamera
 import file_utils
+import os
 
 
 class PiCam:
@@ -49,5 +50,6 @@ class PiCam:
         """ Use arguments for dependency injection.
         This way unit tests can call with a mock camera.
         """
-        image_name = dir_name + "/" + file_utils.FileUtils.filename_with_timestamp(base_name)
+        file_name_no_dir = file_utils.FileUtils.filename_with_timestamp(base_name)
+        image_name = os.path.join(dir_name, file_name_no_dir)
         camera.capture(image_name)
