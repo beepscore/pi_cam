@@ -8,7 +8,8 @@ class FileUtils:
     """
 
     def timestamp_string():
-        """ return local time as a string of the form 20150510T152647.888360
+        """ return local time as a string of the form yyyymmddTssssss.ssssss
+        e.g. 20150510T152647.888360
         ignore time zone offset
         """
         # utc time
@@ -22,5 +23,8 @@ class FileUtils:
         time_string_no_dashes_no_colons = time_string_no_dashes.replace(':', '')
         return time_string_no_dashes_no_colons
     
-    def filename_with_timestamp(basename):
-        return basename + FileUtils.timestamp_string()
+    def filename_with_timestamp(base_name):
+        """ return string of the form <base_name>yyyymmddTssssss.ssssss.jpg
+        e.g. my_base20150510T152647.888360.jpg
+        """
+        return base_name + FileUtils.timestamp_string() + ".jpg"

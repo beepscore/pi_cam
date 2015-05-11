@@ -9,8 +9,9 @@ class TestFileUtils(unittest.TestCase):
 
     def setUp(self):
         # seconds decimal point . followed by 6 digits at end of string
-        # self.regex = re.compile(r"\.\d{6}$")
-        self.regex = re.compile(r"\d{8}T\d{6}\.\d{6}$")
+        # self.regex_timestamp_end = re.compile(r"\.\d{6}$")
+        self.regex_timestamp_end = re.compile(r"\d{8}T\d{6}\.\d{6}$")
+        self.regex_filename_end = re.compile(r"\d{8}T\d{6}\.\d{6}\.jpg$")
        
     def test_timestamp_string(self):
         actual = file_utils.FileUtils.timestamp_string()
@@ -21,19 +22,19 @@ class TestFileUtils(unittest.TestCase):
         actual = file_utils.FileUtils.timestamp_string()
         # use findall to get list
         # alternatively could use search not match when not matching beginning of string
-        # https://docs.python.org/3.3/howto/regex.html 
-        matches = self.regex.findall(actual)
+        # https://docs.python.org/3.3/howto/regex_timestamp_end.html 
+        matches = self.regex_timestamp_end.findall(actual)
         self.assertEqual(1, len(matches))
 
     def test_filename_with_timestamp_start(self):
-        basename = "bar"
-        actual = file_utils.FileUtils.filename_with_timestamp(basename)
-        self.assertEqual(basename, actual[0:len(basename)])
+        base_name = "bar"
+        actual = file_utils.FileUtils.filename_with_timestamp(base_name)
+        self.assertEqual(base_name, actual[0:len(base_name)])
         
     def test_filename_with_timestamp_end(self):
-        basename = "grizzly"
-        actual = file_utils.FileUtils.filename_with_timestamp(basename)
-        matches = self.regex.findall(actual)
+        base_name = "grizzly"
+        actual = file_utils.FileUtils.filename_with_timestamp(base_name)
+        matches = self.regex_filename_end.findall(actual)
         self.assertEqual(1, len(matches))
 
 if __name__ == "__main__":
