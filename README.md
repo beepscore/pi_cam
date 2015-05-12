@@ -5,12 +5,34 @@ Record info about using Raspberry Pi camera with Python.
 
 # References
 
-## Python picamera
+### Python picamera
 https://www.raspberrypi.org/documentation/usage/camera/python/README.md
+
+### Motion sensor
+https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/
+
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-12-sensing-movement
+
+## Equipment
+
+### Raspberry Pi 2 - Model B - ARMv7 with 1G RAM
+http://www.adafruit.com/products/2358
+
+### Camera
+Raspberry Pi NoIR Camera Board - Infrared-sensitive Camera
+http://www.adafruit.com/products/1567
+
+### PIR (motion) sensor
+Vetco VUPN5943  
+TODO check output voltage
+similar to Adafruit 189  
+http://www.adafruit.com/products/189  
+Adafruit sensor output is 3.3 V, compatible with pi
+
 
 # Results
 
-## install python module
+## install python camera module
     sudo apt-get install python3-picamera
 
 python3-picamera was already installed.
