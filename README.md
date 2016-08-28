@@ -10,8 +10,27 @@ https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 
 ## Motion detection via camera image diff
 
+## PIL Python Imaging Library
+last commit 2011, no Python 3 support
+https://en.wikipedia.org/wiki/Python_Imaging_Library
+
+## Pillow
+http://pillow.readthedocs.io/en/latest/
+active fork of PIL Python Imaging Library
+supports Raspbian Jessie Python 3.4
+
+### python-imaging-tk made by raspberry pi community
+sudo apt-get install python-imaging-tk
+
 ### motion.py
+#### maybe this is a similar library with the same name
 http://bogdanmarian.com/motion/
+
+https://www.maketecheasier.com/setup-motion-detection-webcam-ubuntu/
+https://github.com/Motion-Project/motion
+
+#### surveillance camera
+http://www.codeproject.com/Articles/665518/Raspberry-Pi-as-low-cost-HD-surveillance-camera
 
 #### baby monitor
 https://www.raspberrypi.org/blog/raspberry-pi-baby-monitor/
