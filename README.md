@@ -5,13 +5,25 @@ Record info about using Raspberry Pi camera with Python.
 
 # References
 
-### Python picamera
+## Python picamera
 https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 
-### Motion sensor
+## Motion detection via camera image diff
+
+### motion.py
+http://bogdanmarian.com/motion/
+
+#### baby monitor
+https://www.raspberrypi.org/blog/raspberry-pi-baby-monitor/
+http://stuffbabiesneed.com/blog/building-raspberry-pi-baby-monitor-part-one/
+
+http://shallowsky.com/blog/tags/crittercam/
+
+## Motion detection via PIR sensor
 https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/
 
 https://learn.adafruit.com/adafruits-raspberry-pi-lesson-12-sensing-movement
+
 
 ## Equipment
 
