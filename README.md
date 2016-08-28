@@ -8,6 +8,18 @@ Record info about using Raspberry Pi camera with Python.
 ## Python picamera
 https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 
+## MotionEyeOS
+Web front end for motion, designed for single board computer like Raspberry Pi
+Dependencies motion, tornado
+https://github.com/ccrisan/motioneyeos/wiki
+
+https://www.raspberrypi.org/magpi/raspberry-pi-night-vision-camera-hack/
+https://www.raspberrypi.org/magpi-issues/MagPi46.pdf
+
+### Add push notifications to MotionEyeOS
+requires a paid subscription to service "Pushover" $4.99
+https://www.raspberrypi.org/magpi-issues/MagPi43.pdf
+
 ## Motion detection via camera image diff
 
 ## PIL Python Imaging Library
@@ -22,12 +34,13 @@ supports Raspbian Jessie Python 3.4
 ### python-imaging-tk made by raspberry pi community
 sudo apt-get install python-imaging-tk
 
-### motion.py
+### motion
+https://www.maketecheasier.com/setup-motion-detection-webcam-ubuntu/
+https://github.com/Motion-Project/motion
+
 #### maybe this is a similar library with the same name
 http://bogdanmarian.com/motion/
 
-https://www.maketecheasier.com/setup-motion-detection-webcam-ubuntu/
-https://github.com/Motion-Project/motion
 
 #### surveillance camera
 http://www.codeproject.com/Articles/665518/Raspberry-Pi-as-low-cost-HD-surveillance-camera
