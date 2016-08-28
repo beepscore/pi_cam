@@ -12,7 +12,7 @@ class TestFileUtils(unittest.TestCase):
         # self.regex_timestamp_end = re.compile(r"\.\d{6}$")
         self.regex_timestamp_end = re.compile(r"\d{8}T\d{6}\.\d{6}$")
         self.regex_filename_end = re.compile(r"\d{8}T\d{6}\.\d{6}\.jpg$")
-       
+
     def test_timestamp_string(self):
         actual = file_utils.FileUtils.timestamp_string()
         # TODO: Update test by year 2020
@@ -30,7 +30,7 @@ class TestFileUtils(unittest.TestCase):
         base_name = "bar"
         actual = file_utils.FileUtils.filename_with_timestamp(base_name)
         self.assertEqual(base_name, actual[0:len(base_name)])
-        
+
     def test_filename_with_timestamp_end(self):
         base_name = "grizzly"
         actual = file_utils.FileUtils.filename_with_timestamp(base_name)

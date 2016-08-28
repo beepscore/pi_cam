@@ -8,13 +8,13 @@ class TestPiCam(unittest.TestCase):
 
     def setUp(self):
         self.pi_cam = pi_cam.PiCam()
-       
+
     def tearDown(self):
         """ close camera to avoid error picamera.exc.PiCameraMMALError
-	Camera component couldn't be enabled: Out of resources (other than memory)
+        Camera component couldn't be enabled: Out of resources (other than memory)
         http://stackoverflow.com/questions/27468543/
-	picamera-cannot-be-initialized-as-a-class-member-when-the-script-is-run-from-com
-	"""
+        picamera-cannot-be-initialized-as-a-class-member-when-the-script-is-run-from-com
+        """
         self.pi_cam.camera.close()
 
     def test_init(self):
