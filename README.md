@@ -46,3 +46,8 @@ To run tests in terminal, cd to top level directory that contains subdirectory t
     ----------------------------------------------------------------------
     Ran 7 tests in 1.174s
 
+## Copy files from pi images directory to mac
+From macOS terminal
+
+    cd ~/Desktop
+    scp -r pi@192.168.2.3:~/beepscore/pi_cam/images .
