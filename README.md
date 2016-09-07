@@ -8,10 +8,19 @@ Record info about using Raspberry Pi camera with Python.
 ## Python picamera
 https://www.raspberrypi.org/documentation/usage/camera/python/README.md
 
+## raspberrypi.org article and referenced Adafruit tutorial
+Uses motion library
+https://www.raspberrypi.org/blog/identifying-hallway-whistler/
+https://www.youtube.com/watch?v=GkZusNr0gBM
+https://learn.adafruit.com/cloud-cam-connected-raspberry-pi-security-camera/dropbox-sync?view=all
+
 ## MotionEyeOS
 Web front end for motion, designed for single board computer like Raspberry Pi
 Dependencies motion, tornado
 https://github.com/ccrisan/motioneyeos/wiki
+### 2016-08
+My first try with this didn't work.
+Might be easier to use just motion or MotionEye instead of MotionEyeOS.
 
 https://www.raspberrypi.org/magpi/raspberry-pi-night-vision-camera-hack/
 https://www.raspberrypi.org/magpi-issues/MagPi46.pdf
